@@ -1,5 +1,6 @@
 import React from 'react'
 import Item from './Item'
+import { Container } from '@chakra-ui/react'
 
 const ItemList = ({productos}) => {
     return (
@@ -9,6 +10,7 @@ const ItemList = ({productos}) => {
        {
           productos.map((p) => {
               return(
+                <Container>
                   <Item 
                      key={p.id}
                      id={p.id}
@@ -17,7 +19,7 @@ const ItemList = ({productos}) => {
                      price={p.price}
                      image={p.image}
                      />
-  
+                </Container>
               )
           })
   
